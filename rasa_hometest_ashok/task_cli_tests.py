@@ -81,4 +81,4 @@ def delete_all_tasks():
 
     for task_id in task_ids:
         run_taskwarrior_command(f'{task_id} delete rc.confirmation=off')
-        print(task_id+"   : ---> killed ")
+        print(task_id+"   : ---> task are killed ")
