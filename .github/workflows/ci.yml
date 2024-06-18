@@ -9,7 +9,7 @@ on:
       - main  
 
 jobs:
-  test:
+  RASA-HOMETEST-CIJOB:
     runs-on: ubuntu-latest  # Use the latest Ubuntu runner
 
     steps:
@@ -33,7 +33,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pytest pytest-html 
-      - name: Run RASR-TASK-CLI-API Tests
+      - name: Run RASA-TASK-CLI-API Tests
         run: |
           pytest --html=report.html rasa_hometest_ashok/task_cli_tests.py 
         env:
