@@ -33,9 +33,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pytest pytest-html 
-      - name: Run RASA-TASK-CLI-API Tests
+          pip install request
+          pip install requests pytest
+      - name: Run RASA-TASK-CLI Tests
         run: |
-          pytest --html=report.html rasa_hometest_ashok/task_cli_tests.py 
+          pytest --html=taskclitest.html rasa_hometest_ashok/task_cli_tests.py 
+      - name: Run RASA-FAKESTORE-API Tests2
+        run: |
+          pytest --html=fakestoreapitest.html rasa_hometest_ashok/FakeStoreApiTests/fakestorapitest.py
         env:
           PYTHONPATH: ./
         
