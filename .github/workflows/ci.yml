@@ -29,8 +29,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pytest pytest-html 
-          pip install -r requirements.txt 
-      - name: Run tests
+      - name: Run TASK-CLI-Tests
         run: |
           pytest --html=report.html /rasa_hometest_ashok/task_cli_tests.py 
         env:
