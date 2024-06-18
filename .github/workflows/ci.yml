@@ -36,7 +36,7 @@ jobs:
           pip install requests pytest
       - name: Run RASA-TASK-CLI Tests
         run: |
-          pytest --html=taskclitest.html rasa_hometest_ashok/task_cli_tests.py 
+          pytest --html=taskclitest.html rasa_hometest_ashok/task_cli_test/task_cli_tests.py 
       - name: Run RASA-FAKESTORE-API Tests2
         run: |
           pytest --html=fakestoreapitest.html rasa_hometest_ashok/FakeStoreApiTests/fakestorapitest.py
