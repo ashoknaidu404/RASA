@@ -18,7 +18,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           node-version: '20'
-
+          
+      - name: Install taskwarrior
+        run: |
+          sudo apt-get update
+          sudo apt-get install taskwarrior -y
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
