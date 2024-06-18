@@ -1,12 +1,12 @@
-name: Python CI
+name: Taskwarrior and API  CI
 
 on:
   push:
     branches:
-      - main  # Trigger on pushes to the main branch
+      - main  
   pull_request:
     branches:
-      - main  # Trigger on pull requests to the main branch
+      - main  
 
 jobs:
   test:
@@ -33,9 +33,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pytest pytest-html 
-      - name: Run TASK-CLI-Tests
+      - name: Run RASR-TASK-CLI-API Tests
         run: |
-          pytest --html=rasa_hometest_ashok/report.html rasa_hometest_ashok/task_cli_tests.py 
+          pytest --html=report.html rasa_hometest_ashok/task_cli_tests.py 
         env:
           PYTHONPATH: ./
         
