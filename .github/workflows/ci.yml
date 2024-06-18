@@ -31,7 +31,7 @@ jobs:
           pip install pytest pytest-html 
       - name: Run TASK-CLI-Tests
         run: |
-          pytest --html=report.html /rasa_hometest_ashok/task_cli_tests.py 
+          pytest --html=report.html rasa_hometest_ashok/task_cli_tests.py 
         env:
           PYTHONPATH: ./
         
