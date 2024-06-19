@@ -1,15 +1,17 @@
-#============================================= RASA===========================================================#
-
 Project Name: RASA-hometest_TaskCLI-API_Test
 Description:
 This project contains a home test for Task CLI and API automation and continuous integration (CI).
 
 Installation:
+=============================
 Before running the scripts, ensure you have python3, pytest and requests installed. You can install them using pip:
 Install python based OS command may vary, python3 used in all platforms see for more info : https://docs.pytest.org/en/7.1.x/getting-started.html
+
 pip install pytest
 pip install pytest pytest-html
 pip install requests pytest
+Install taskwarrior : see below url for instructions 
+https://taskwarrior.org/download/
 
 Running the Tests:
 ============================
@@ -37,7 +39,8 @@ After installing the required packages, follow these steps to run the tests:
       python -m pytest fakestoreapitest.py
       above  command executes the tests in fakestoreapitest.py using pytest.
 
-Project Folder Structure
+Project Folder Structure:
+==========================
 -.github
   -rasa_home_test.yml
 - rasa_hometest_ashok/
@@ -49,6 +52,7 @@ Project Folder Structure
    
 
 Notes: 
+======================
 Task is not supported on Windows, so Task CLI tests won't work on that platform.
 Ensure Python 3.x is installed on your system.
 Adjust the paths according to your actual project structure.
